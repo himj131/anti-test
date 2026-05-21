@@ -1,0 +1,472 @@
+/* ===== Quote Page — Blue Agency Theme ===== */
+
+:root {
+  --blue-900: #0c1a2e;
+  --blue-800: #0f2744;
+  --blue-700: #1a3a5c;
+  --blue-600: #1e4d8c;
+  --blue-500: #2563eb;
+  --blue-400: #3b82f6;
+  --blue-300: #60a5fa;
+  --blue-100: #dbeafe;
+  --blue-50:  #eff6ff;
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+  --border: #e2e8f0;
+  --bg-page: #f0f6ff;
+  --bg-white: #ffffff;
+}
+
+/* ===== Layout ===== */
+
+.wrapper {
+  min-height: 100vh;
+  background: var(--bg-page);
+  padding: 2rem 1rem 4rem;
+  font-family: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+}
+
+.printActions {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 900px;
+  margin: 0 auto 1rem;
+}
+
+.printBtn {
+  background: var(--blue-500);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.4rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  transition: background 0.18s;
+}
+
+.printBtn:hover {
+  background: var(--blue-600);
+}
+
+.document {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--bg-white);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 40px rgba(37, 99, 235, 0.1), 0 1px 8px rgba(0,0,0,0.06);
+}
+
+/* ===== Header ===== */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2.5rem 3rem 2rem;
+  background: linear-gradient(135deg, var(--blue-900) 0%, var(--blue-700) 100%);
+  color: #fff;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.4rem;
+}
+
+.logoIcon {
+  font-size: 1.6rem;
+  color: var(--blue-300);
+}
+
+.logoText {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.agencyTagline {
+  font-size: 0.8rem;
+  color: var(--blue-300);
+  letter-spacing: 0.06em;
+  margin-left: 2.2rem;
+}
+
+.headerRight {
+  text-align: right;
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: 900;
+  letter-spacing: 0.3em;
+  color: #fff;
+  margin-bottom: 0.9rem;
+}
+
+.metaGrid {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0.2rem 0.8rem;
+  font-size: 0.82rem;
+  text-align: right;
+}
+
+.metaLabel {
+  color: var(--blue-300);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.metaValue {
+  color: #fff;
+  font-weight: 600;
+  text-align: right;
+}
+
+.dividerAccent {
+  height: 4px;
+  background: linear-gradient(90deg, var(--blue-500) 0%, var(--blue-300) 60%, transparent 100%);
+}
+
+/* ===== Parties ===== */
+
+.parties {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  padding: 2rem 3rem;
+  background: var(--blue-50);
+  border-bottom: 1px solid var(--border);
+}
+
+.partyCard {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.partyBadge {
+  background: var(--blue-500);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 0.4rem 1rem;
+}
+
+.clientBadge {
+  background: var(--blue-700);
+}
+
+.partyTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.83rem;
+}
+
+.partyTable th,
+.partyTable td {
+  padding: 0.45rem 0.9rem;
+  text-align: left;
+  border-bottom: 1px solid var(--blue-50);
+}
+
+.partyTable th {
+  color: var(--text-muted);
+  font-weight: 500;
+  white-space: nowrap;
+  width: 7rem;
+}
+
+.partyTable td {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.partyTable tr:last-child th,
+.partyTable tr:last-child td {
+  border-bottom: none;
+}
+
+/* ===== Total Banner ===== */
+
+.totalBanner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 3rem 0;
+  padding: 1.1rem 1.6rem;
+  background: linear-gradient(90deg, var(--blue-600) 0%, var(--blue-500) 100%);
+  border-radius: 10px;
+  margin-top: 2rem;
+  color: #fff;
+}
+
+.totalBannerLabel {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  opacity: 0.9;
+}
+
+.totalBannerAmount {
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+
+/* ===== Items Table ===== */
+
+.tableSection {
+  padding: 1.5rem 3rem 0;
+  overflow-x: auto;
+}
+
+.itemsTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.itemsTable thead tr {
+  background: var(--blue-800);
+  color: #fff;
+}
+
+.itemsTable thead th {
+  padding: 0.75rem 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.itemsTable tbody tr {
+  border-bottom: 1px solid var(--border);
+  transition: background 0.12s;
+}
+
+.itemsTable tbody tr:hover {
+  background: var(--blue-50);
+}
+
+.itemsTable tbody td {
+  padding: 0.75rem 0.8rem;
+  color: var(--text-primary);
+  vertical-align: middle;
+}
+
+/* Column widths */
+.colNo   { width: 3rem; text-align: center; }
+.colName { min-width: 10rem; font-weight: 600; }
+.colSpec { color: var(--text-secondary) !important; font-size: 0.8rem !important; }
+.colQty  { width: 3.5rem; text-align: center; }
+.colUnit { width: 3.5rem; text-align: center; }
+.colPrice  { width: 8rem; text-align: right; white-space: nowrap; }
+.colAmount { width: 9rem; text-align: right; font-weight: 700; color: var(--blue-600) !important; white-space: nowrap; }
+
+/* ===== Summary ===== */
+
+.summarySection {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.5rem 3rem 0;
+}
+
+.summaryBox {
+  width: 320px;
+  background: var(--blue-50);
+  border: 1px solid var(--blue-100);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 1.2rem 1.4rem;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  padding: 0.3rem 0;
+}
+
+.summaryDivider {
+  height: 1px;
+  background: var(--blue-300);
+  margin: 0.6rem 0;
+  opacity: 0.4;
+}
+
+.summaryRowTotal {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--blue-600);
+  padding: 0.3rem 0;
+}
+
+/* ===== Notes ===== */
+
+.notesSection {
+  margin: 2rem 3rem 0;
+  padding: 1.2rem 1.4rem;
+  background: #fafbfe;
+  border: 1px solid var(--blue-100);
+  border-left: 4px solid var(--blue-400);
+  border-radius: 8px;
+}
+
+.notesTitle {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--blue-600);
+  margin-bottom: 0.7rem;
+  letter-spacing: 0.04em;
+}
+
+.notesList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.notesList li {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  padding-left: 1rem;
+  position: relative;
+}
+
+.notesList li::before {
+  content: "·";
+  position: absolute;
+  left: 0;
+  color: var(--blue-400);
+  font-weight: 700;
+}
+
+/* ===== Footer ===== */
+
+.footer {
+  margin-top: 2.5rem;
+  padding: 2rem 3rem 2.5rem;
+  background: linear-gradient(135deg, var(--blue-900) 0%, var(--blue-800) 100%);
+  text-align: center;
+  color: var(--blue-300);
+}
+
+.footer p {
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.85;
+}
+
+.footerContact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+.footerDot {
+  color: var(--blue-400);
+}
+
+.footerBrand {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--blue-300);
+  letter-spacing: 0.1em;
+}
+
+/* ===== Print Styles ===== */
+
+@media print {
+  .printActions {
+    display: none;
+  }
+
+  .wrapper {
+    padding: 0;
+    background: #fff;
+  }
+
+  .document {
+    box-shadow: none;
+    border-radius: 0;
+    max-width: 100%;
+  }
+
+  .header {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .totalBanner,
+  .itemsTable thead tr,
+  .footer {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 640px) {
+  .header {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 1.5rem 1.5rem;
+  }
+
+  .headerRight {
+    text-align: left;
+  }
+
+  .parties {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+
+  .totalBanner {
+    margin: 1.5rem 1.5rem 0;
+    flex-direction: column;
+    gap: 0.4rem;
+    text-align: center;
+  }
+
+  .tableSection,
+  .summarySection,
+  .notesSection {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .summarySection {
+    justify-content: center;
+  }
+
+  .summaryBox {
+    width: 100%;
+  }
+
+  .footer {
+    padding: 1.5rem;
+  }
+}
