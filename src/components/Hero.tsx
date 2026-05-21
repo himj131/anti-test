@@ -33,7 +33,7 @@ export default function Hero() {
 
           <div className={styles.ctaGroup}>
             <a href="#gravity-center" className={styles.btnPrimary}>
-              중력 제어 체험하기
+              Antigravity 체험하기
             </a>
             <a href="#playground" className={styles.btnSecondary}>
               터미널 플레이그라운드
